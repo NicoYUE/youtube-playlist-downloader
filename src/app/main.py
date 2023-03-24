@@ -26,3 +26,5 @@ if __name__ == '__main__':
         YtDownloader(output_path).download_audio_with_thumbnail(video_id)
 
         id_cache.set(video_id)
+
+    quit()

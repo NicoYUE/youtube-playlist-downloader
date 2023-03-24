@@ -16,8 +16,7 @@ class YtDownloader:
         youtube = YouTube(video_url)
 
         try:
-            title = youtube.title
-            print("Downloading: " + format(title))
+            print("Downloading: " + format( youtube.title))
         except:
             print("Error when trying to get title from " + video_id)
 
@@ -26,7 +25,7 @@ class YtDownloader:
             video_output_path = stream.download(self.output_path)
             return mp4_to_mp3(video_output_path)
         except VideoUnavailable:
-            print("Cannot access id:{}, title is {}".format(video_id, title))
+            print("Cannot access id:{}, title is {}".format(video_id,  youtube.title))
             pass
 
     def download_thumbnail(self, video_id: str):
